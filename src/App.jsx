@@ -41,4 +41,10 @@ const appRouter = createBrowserRouter([
   },
 ]);
 
-export default appRouter; // Export your router configuration
+export default appRouter; // Export your router config/uration
+
+
+// TODO: top rated click handler to fix
+// TODO: shimmer set
+// TODO: shimmer on every page
+// TODO: cart implementation
