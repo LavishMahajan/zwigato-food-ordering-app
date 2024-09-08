@@ -10,16 +10,19 @@ const Header = () => {
   const cartItems = useSelector((store) => store.cart.items);
 
   return (
-    <div className="flex justify-between bg-slate-100 h-[130px] z-1 shadow-xl">
+    <div className="flex justify-between bg-slate-100 h-[130px] z-1 shadow-xl shadow-slate-300">
       <div className="flex w-32 h-32 justify-between">
         <img
-          className="w-24 h-24 m-4 rounded-full shadow-xl hover:scale-110 transition ease-in-out duration-300 transform"
+          className="object-cover object-center w-24 h-24 m-4 rounded-[50%] shadow-xl hover:scale-110 transition ease-in-out duration-300 transform"
           src={LOGO_URL}
           alt="logo"
         />
-        <h2 className="px-4 py-12 text-slate-500 text-xl font-poppins font-bold hover:scale-110 transition ease-in-out duration-300 transform">
-          zwigato.com
-        </h2>
+
+        <Link to="/">
+          <h2 className="px-4 py-12 text-slate-500 text-xl font-poppins font-bold hover:scale-110 transition ease-in-out duration-300 transform cursor-pointer">
+            zwigato.com
+          </h2>
+        </Link>
       </div>
       <div className="items-center">
         <ul className="flex justify-between py-12 items-center ">
@@ -27,7 +30,7 @@ const Header = () => {
           <li className="font-bold px-4 p-2 font-poppins text-xl rounded-xl hover:bg-slate-300 hover:text-blue-900 hover: scale-95 transition-font-extrabold ease-in-out duration-300 transform">
             <Link to="/"> HOME</Link>
           </li>
-          
+
           <li className="font-bold px-4 p-2 font-poppins text-xl  rounded-xl hover:bg-slate-300 hover:text-blue-900 hover: scale-95 transition ease-in-out duration-300 transform">
             <Link to="/cart">CART ({cartItems.length} items)</Link>
           </li>

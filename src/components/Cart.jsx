@@ -14,7 +14,7 @@ const Cart = () => {
 
   return (
     <div className="text-center m-4 p-4">
-      <h1 className="font-extrabold text-6xl text-[#000] shadow-slate-500 rounded-2xl shadow-lg bg-slate-300">Cart</h1>
+      <h1 className="font-extrabold text-6xl text-[#000]">Cart</h1>
       <div className="w-3/4 ml-40">
         <button
           className="px-6 shadow-slate-400 shadow-xl text-xl ml-12 my-6 rounded-xl font-bold py-4 bg-slate-700 text-white "
@@ -22,7 +22,7 @@ const Cart = () => {
         >
           Clear Cart
         </button>
-        {cartItems.length === 0 && <h1>Cart is empty. Please add items to the cart.</h1>}
+        {cartItems.length === 0 && <h1 className="font-bold text-slate-700 text-xl">Cart is empty. Please add items to the cart.</h1>}
         <ItemList items={cartItems} />
       </div>
     </div>

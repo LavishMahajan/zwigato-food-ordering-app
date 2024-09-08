@@ -52,7 +52,7 @@ const Body = () => {
               onChange={(e) => setSearchText(e.target.value)}
             />
             <button
-              className="px-4 py-2 bg-slate-400 m-4 rounded-3xl shadow-xl hover:text-white hover:bg-slate-600 transition ease-in-out duration-300 transform"
+              className="px-4 py-2 bg-slate-400 m-4 rounded-3xl shadow-slate-400 shadow-lg text-slate-900 hover:text-white hover:bg-slate-600 transition ease-in-out duration-300 transform"
               onClick={() => {
                 const filteredRestaurants = listOfRestaurants.filter((res) =>
                   res.info.name.toLowerCase().includes(searchText.toLowerCase())
@@ -64,12 +64,12 @@ const Body = () => {
             </button>
           </div>
           <button
-            className="px-4 py-2 bg-slate-400 mt-8 mr-32 ml-8 mb-8 rounded-3xl shadow-xl hover:text-white hover:bg-slate-600 transition ease-in-out duration-300 transform"
+            className="px-4 py-2 bg-slate-400 mt-8 mr-32 ml-8 mb-8 rounded-3xl shadow-slate-400 shadow-lg hover:text-white hover:bg-slate-600 transition ease-in-out duration-300 transform"
             onClick={() => {
               const filterList = listOfRestaurants.filter(
                 (res) => res.info.avgRating > 4.5
               );
-              setListOfRestaurants(filterList);
+              setFilteredRestaurant(filterList);
             }}
           >
             Top Rated Restaurants

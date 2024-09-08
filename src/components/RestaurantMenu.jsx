@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import Shimmer from "./Shimmer";
+import Shimmer_menu from "./Shimmer_menu";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
@@ -12,7 +12,7 @@ const RestaurantMenu = () => {
 
   if (resInfo === null) {
     console.log("running");
-    return <Shimmer />;
+    return <Shimmer_menu />;
   }
 
   const { name, price, description } = resInfo;
